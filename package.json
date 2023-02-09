@@ -1,11 +1,18 @@
 {
   "name": "@factor-sef/colorful",
   "version": "1.0.0",
-  "description": "",
+  "description": "Color object for working in JavaScript. Based on [CSS Color Module Level 4](https://drafts.csswg.org/css-color/#introduction).",
   "main": "index.js",
   "scripts": {},
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Andrey Yakovenko",
+    "url": "https://github.com/FactorSef"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FactorSef/colorful.git"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.4.0",
     "prettier": "2.8.4",
