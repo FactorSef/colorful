@@ -2,8 +2,14 @@
   "name": "@factor-sef/colorful",
   "version": "1.0.0",
   "description": "Color object for working in JavaScript. Based on [CSS Color Module Level 4](https://drafts.csswg.org/css-color/#introduction).",
-  "main": "index.js",
-  "scripts": {},
+  "main": "es/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "npm run build:lib && npm run build:es",
+    "build:lib": "tsc --project \"./tsconfig.lib.json\"",
+    "build:es": "tsc --project \"./tsconfig.es.json\""
+  },
   "author": {
     "name": "Andrey Yakovenko",
     "url": "https://github.com/FactorSef"

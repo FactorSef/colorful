@@ -1,0 +1,7 @@
+.vscode
+src
+.npmignore
+tsconfig.*
+.editorconfig
+.prettierrc
+workflows
