@@ -4,4 +4,4 @@ src
 tsconfig.*
 .editorconfig
 .prettierrc
-workflows
+.github
