@@ -18,14 +18,6 @@ export function segmentToHex(segment: number): string {
 	return hex.length === 1 ? `0${hex}` : hex;
 }
 
-export function getRemainder(value: string): number {
-	const clearValue = value.replace(/^(0?.)/gi, '');
-
-	const remainder = clearValue.split('').reduce((acc) => acc * 10, 1);
-
-	return parseInt(clearValue) / remainder;
-}
-
 export function clamp(value: number, min: number = 0, max: number = 1): number {
 	return Math.min(max, Math.max(min, value));
 }

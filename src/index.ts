@@ -1,5 +1,5 @@
 import { regex } from './constants';
-import { clamp, getRemainder, hexSegmentParser, rgbToHsl, rgbToHwb, segmentToHex } from './utils';
+import { clamp, hexSegmentParser, rgbToHsl, rgbToHwb, segmentToHex } from './utils';
 
 type ColorType = string | Color | Array<number>;
 type ColorInitType = 'rgb' | 'hsl' | 'hwb';
