@@ -1,3 +1,19 @@
 # @factor-sef/colorful
 
 Color object for working in JavaScript. Based on [CSS Color Module Level 4](https://drafts.csswg.org/css-color/#introduction).
+
+## Instalation
+
+```bash
+npm install @factor-sef/colorful
+```
+
+## Usage
+
+```TypeScript
+import Color from '@factor-sef/colorful';
+
+const color = new Color('#ffffff');
+
+console.log(color.toRgbString()) // => 'rgb(255, 255, 255)'
+```
