@@ -25,7 +25,7 @@ console.log(color.toRgbString()) // => 'rgb(255, 255, 255)'
 - [x] Work with HSL
 - [x] Work with HWB
 - [ ] Get/set hue rotation
-- [ ] Get/set alpha
+- [x] Get/set alpha
 - [ ] Get/set satudation
 - [ ] Get/set lightness
 - [ ] Get/set blackness

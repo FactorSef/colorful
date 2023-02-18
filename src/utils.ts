@@ -1,5 +1,9 @@
 import type Color from './index';
 
+export function isNil<T>(value: T): boolean {
+	return value === null || value === undefined || typeof value === 'undefined';
+}
+
 export function hexSegmentParser(this: Color, ...value: string[]) {
 	return (key: string, index: number): void => {
 		let parsedValue = parseInt([value[index * 2], value[index * 2 + 1]].join(''), 16);

@@ -1,12 +1,12 @@
 import { regex } from './constants';
-import { clamp, hexSegmentParser, rgbToHsl, rgbToHwb, segmentToHex } from './utils';
+import { clamp, hexSegmentParser, isNil, rgbToHsl, rgbToHwb, segmentToHex } from './utils';
 
 type ColorType = string | Color | Array<number>;
 type ColorInitType = 'rgb' | 'hsl' | 'hwb';
 type RGBA = 'r' | 'g' | 'b' | 'a';
 
 /**
- * See more: https://drafts.csswg.org/css-color/
+ * Color object
  */
 class Color extends Object {
 	private initialValue: string;
@@ -16,7 +16,7 @@ class Color extends Object {
 	b: number = 0;
 	a: number = 1;
 
-	constructor(color: ColorType, type: ColorInitType = 'rgb') {
+	constructor(color: ColorType, type?: ColorInitType) {
 		super();
 
 		if (typeof color === 'string') {
@@ -57,6 +57,9 @@ class Color extends Object {
 		}
 	}
 
+	/**
+	 * Checking the validity of a color value
+	 */
 	get isValid(): boolean {
 		if (!this.initialValue || this.initialValue === 'unknown') {
 			return false;
@@ -263,6 +266,23 @@ class Color extends Object {
 			case 'string':
 				return this.toString();
 		}
+	}
+
+	/**
+	 * Get alpha value
+	 * @returns value as 0..100
+	 */
+	alpha(): number;
+	/** Set alpha value as 0..100 */
+	alpha(value: number): Color;
+	alpha(value?: number): Color | number {
+		if (isNil(value)) {
+			return this.a * 100;
+		}
+
+		this.a = clamp(parseFloat((value / 100).toFixed(3)));
+
+		return this;
 	}
 }
 
