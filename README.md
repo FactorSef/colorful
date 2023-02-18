@@ -17,3 +17,17 @@ const color = new Color('#ffffff');
 
 console.log(color.toRgbString()) // => 'rgb(255, 255, 255)'
 ```
+
+## Roadmap
+
+- [x] Work with HEX
+- [x] Work with RGB
+- [x] Work with HSL
+- [x] Work with HWB
+- [ ] Get/set hue rotation
+- [ ] Get/set alpha
+- [ ] Get/set satudation
+- [ ] Get/set lightness
+- [ ] Get/set blackness
+- [ ] set scale
+- [ ] set greyscale
