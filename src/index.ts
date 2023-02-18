@@ -142,9 +142,10 @@ class Color extends Object {
 		const [, ...value] = this.initialValue;
 
 		if (value.length === 3) {
-			this.r = parseInt(value[0]);
-			this.g = parseInt(value[1]);
-			this.b = parseInt(value[2]);
+			const r = parseInt(value[0]),
+				g = parseInt(value[1]),
+				b = parseInt(value[2]);
+			['r', 'g', 'b'].forEach(hexSegmentParser.apply(this, [r, r, g, g, b, b]));
 		} else if (value.length === 6) {
 			['r', 'g', 'b'].forEach(hexSegmentParser.apply(this, value));
 		} else if (value.length === 8) {

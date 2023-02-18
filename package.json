@@ -1,6 +1,6 @@
 {
   "name": "@factor-sef/colorful",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Color object for working in JavaScript. Based on [CSS Color Module Level 4](https://drafts.csswg.org/css-color/#introduction).",
   "main": "es/index.js",
   "module": "lib/index.js",
